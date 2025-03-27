@@ -1,170 +1,298 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
-<head>
+  <head>
+    <title>Shravan Website</title>
     <meta charset="utf-8">
-    <title>Shravan</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Inter:wght@600&family=Lobster+Two:wght@700&display=swap" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Gochi+Hand|Arvo:400,700" rel="stylesheet" type="text/css">
-    <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/aos.css">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="css/style.css">
 
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-</head>
+  </head>
 
-<body>
-    <div class="container-xxl bg-white p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+    
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
         </div>
-        <!-- Spinner End -->
+        <div class="site-mobile-menu-body"></div>
+      </div>
 
 
-        <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-            <a href="index.html" class="navbar-brand  m-auto">
-                <h1 class="m-0 promo text-primary"><i class="fa fa-smile-beam  me-3"></i>Hi there 👋</h1>
-            </a>
-           
-        </nav>
-        <!-- Navbar End -->
 
+      
 
-        <!-- Carousel Start -->
-        <div class="container-fluid p-0 mb-5">
-            <div class="owl-carousel header-carousel position-relative">
-                <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="img/img-slide01.jpg" alt="">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                        <div class="container">
-                            <div class="row justify-content-end">
-                                <div class="col-10 col-lg-8">
-                                    <h1 class="promo display-2 text-white animated slideInDown mb-4"> I am Shravan</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">I'm in Class 1 (CIE 1)! 🌟 I'm just starting my adventure with computers, and guess what? I've already learned some HTML! 🎉 I even made a cool little application all by myself—make sure to check it out! 💻 <br>
-                                        When I'm not busy learing, you'll find me having fun playing video games 🎮, thinking up new moves in chess ♟️, or making awesome Instagram reels! 📱 <br><br>Welcome to my website! Let's have some fun together!.</p>
-                                    <a href="https://shravanabc.github.io/app" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">ABCD App</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="owl-carousel-item position-relative">
-                    <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(0, 0, 0, .2);">
-                        <div class="container">
-                            <div class="row justify-content-end">
-                                <div class="col-10 col-lg-8">
-                                    <h1 class="promo display-2 text-white animated slideInDown mb-4">I am Shravan</h1>
-                                    <p class="fs-5 fw-medium text-white mb-4 pb-2">I'm in Class 1 (CIE 1)! 🌟 I'm just starting my adventure with computers, and guess what? I've already learned some HTML! 🎉 I even made a cool little application all by myself—make sure to check it out! 💻 <br>
-                                        When I'm not busy learing, you'll find me having fun playing video games 🎮, thinking up new moves in chess ♟️, or making awesome Instagram reels! 📱 <br><br>Welcome to my website! Let's have some fun together!.</p>
-                                    <a href="https://shravanabc.github.io/app" class="btn btn-primary rounded-pill py-sm-3 px-sm-5 me-3 animated slideInLeft">ABCD App</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="ftco-blocks-cover-1">
+       <!-- data-stellar-background-ratio="0.5" style="background-image: url('images/hero_1.jpg')" -->
+      <div class="site-section-cover overlay" data-stellar-background-ratio="0.5" style="background-image: url('images/shravans.jpeg')">
+        <div class="container">
+          <div class="row align-items-center ">
+
+            <div class="col-md-12 text-center">
+
+              <h1 style="font-size: 60px;" class="mb-3 font-weight-bold text-teal">SHRAVAN</h1>
+
+              <span class="text-cursive h5 text-red">Welcome to My World!</span>
             </div>
+            
+          </div>
         </div>
-        <!-- Carousel End -->
+      </div>
+    </div>
 
+    
 
-        <!-- Facilities Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                    <h1 class="mb-3">My Hobbies</h1>
-                </div>
-                <div class="row g-4">
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="facility-item">
-                            <div class="facility-icon bg-primary">
-                                <span class="bg-primary"></span>
-                                <i class="fa fa-chess-knight fa-3x text-primary"></i>
-                                <span class="bg-primary"></span>
-                            </div>
-                            <div class="facility-text bg-primary">
-                                <h3 class="text-primary mb-3">Chess</h3>
-                                <p class="mb-0">Chess is like a game of thinking and planning. I enjoy figuring out the best moves!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="facility-item">
-                            <div class="facility-icon bg-success">
-                                <span class="bg-success"></span>
-                                <i class="fa fa-running fa-3x text-success"></i>
-                                <span class="bg-success"></span>
-                            </div>
-                            <div class="facility-text bg-success">
-                                <h3 class="text-success mb-3">Karate 🥋</h3>
-                                <p class="mb-0">I’m learning Karate and I’m now a yellow belt! 🌟 I even won in a tournament! Karate helps me stay strong and focused, and I really enjoy it!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="facility-item">
-                            <div class="facility-icon bg-warning">
-                                <span class="bg-warning"></span>
-                                <i class="fa  fa-puzzle-piece fa-3x text-warning"></i> 
-                                <span class="bg-warning"></span>
-                            </div>
-                            <div class="facility-text bg-warning">
-                                <h3 class="text-warning mb-3">Maths & Puzzle</h3>
-                                <p class="mb-0">I love solving maths problems and puzzles! They’re like fun challenges that help me think and learn new things. Plus, it’s super cool when I figure out the answers!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="facility-item">
-                            <div class="facility-icon bg-info">
-                                <span class="bg-info"></span>
-                                <i class="fa fa-gamepad fa-3x text-info"></i>
-                                <span class="bg-info"></span>
-                            </div>
-                            <div class="facility-text bg-info">
-                                <h3 class="text-info mb-3">Playing Games</h3>
-                                <p class="mb-0">I really enjoy playing games! Whether it's video games, board games, or even outdoor games, I always have a blast. Games are a fun way to relax, learn new things, and have adventures!</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <img src="images/aboutme.jpeg" alt="Image" class="img-fluid" style="border-radius: 40px;">
+          </div>
+          <div class="col-md-5 ml-auto pl-md-5">
+            <span class="text-cursive h5 text-red">About Me</span>
+            <h3 class="text-black">My Fun Learning Journey</h3>
+            <p>Hi, I'm in <strong>Class 1 (CIE 1)</strong>, and I'm super excited to share my little corner of the internet with you!</p>
+    
+    <p>I’ve just started learning about computers, and guess what? I already know some <strong>HTML</strong>! 🎉 
+    I even built a small app all by myself—make sure to check it out! 💻</p>
+
+    <p>When I’m not busy learning, you’ll find me:</p>
+    <ul>
+        <li class="emoji">🎮 Playing video games</li>
+        <li class="emoji">♟️ Thinking up cool chess moves</li>
+        <li class="emoji">📱 Creating awesome Instagram reels</li>
+    </ul>
+
+    <p>I love exploring new things, and this website is just the beginning! ✨</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-teal">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5 section-2-title">
+          <div class="col-md-6">
+            <span class="text-cursive h5 text-red">My Creations ✨</span>
+            <h3 class="text-white text-center">See what i have done</h3>
+            <p class="mb-5">I want to become an enterpruner. So doing something whatever interests me</p>
+          </div>
+        </div>
+        <div class="row align-items-stretch">
+
+          <div class="col-lg-6 col-md-6 mb-6">
+            <div class="post-entry-1 h-100 person-1 blue">
+              
+                <img src="images/abc.png" alt="Image"
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">App</span>
+                <h2>Swipe 2 Learn</h2>
+                <p>Simple ABCD learning App with basic html i learned.</p>
+              </div>
             </div>
+          </div>
+          <div class="col-lg-6 col-md-6 mb-6">
+            <div class="post-entry-1 h-100 person-1 yellow">
+              
+                <img src="images/tree.png" alt="Image"
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">Story</span>
+                <h2>Boy and the Wise Tree</h2>
+                <p>A storybook I wrote!. Soon It will be published</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 text-center mt-5 mb-5 ">
+            <span class="text-cursive h5 text-red">My Achievements ✨</span>
+            <h3 class="text-white">See what i have done</h3>
+          </div>
+           <div class="col-lg-6 col-md-6 mb-6">
+            <div class="post-entry-1 h-100 person-1 red">
+              
+                <img src="images/star-badge.png" alt="Image"
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">Maths</span>
+                <h2>3rd in Maths Olympaid</h2>
+                <p>Got International rank 3 in International Maths Olympaid 2024-25 with Score: 39/40 marks</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 mb-6">
+            <div class="post-entry-1 h-100 person-1 green">
+              
+                <img src="images/karate.png" alt="Image"
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">Karate</span>
+                <h2>1st in National level tournament</h2>
+                <p>Now Green Belt in Karate – Won 1st place at the National Level and in many competitions!.</p>
+              </div>
+            </div>
+          </div>
+
+         <!--  <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 blue">
+              
+                <img src="images/person_5.jpg" alt="Image"
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">Founder</span>
+                <h2>James Doe</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1 red">
+              
+                <img src="images/person_1.jpg" alt="Image"
+                 class="img-fluid">
+            
+              <div class="post-entry-1-contents">
+                <span class="meta">Founder</span>
+                <h2>James Doe</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, sapiente.</p>
+              </div>
+            </div>
+          </div>  -->
+
+
         </div>
-       
+      </div>
+    </div>
+    
+    <div class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <span class="text-cursive h5 text-red d-block">Gallery</span>
+            <h2 class="text-black">My Photos</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 mb-4">
+            <a href="images/award.jpeg" data-fancybox="gal"><img src="images/thumb/award.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		   <div class="col-md-3 mb-4">
+            <a href="images/photo (10).jpeg" data-fancybox="gal"><img src="images/thumb/photo (10).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+           <div class="col-md-3 mb-4">
+            <a href="images/photo (19).jpeg" data-fancybox="gal"><img src="images/thumb/photo (19).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+          <div class="col-md-3 mb-4">
+            <a href="images/tiger.jpeg" data-fancybox="gal"><img src="images/thumb/tiger.jpg" alt="Image" class="img-fluid"></a>
+          </div>
+          <div class="col-md-3 mb-4">
+            <a href="images/photo (17).jpeg" data-fancybox="gal"><img src="images/thumb/photo (17).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+ <div class="col-md-3 mb-4">
+            <a href="images/photo (14).jpeg" data-fancybox="gal"><img src="images/thumb/photo (14).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+          
+		   <div class="col-md-3 mb-4">
+            <a href="images/photo (16).jpeg" data-fancybox="gal"><img src="images/thumb/photo (16).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (15).jpeg" data-fancybox="gal"><img src="images/thumb/photo (15).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  
+		  
+		  
+		 
+		  
+		 
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (8).jpeg" data-fancybox="gal"><img src="images/thumb/photo (8).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (2).jpeg" data-fancybox="gal"><img src="images/thumb/photo (2).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (3).jpeg" data-fancybox="gal"><img src="images/thumb/photo (3).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (12).jpeg" data-fancybox="gal"><img src="images/thumb/photo (12).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (11).jpeg" data-fancybox="gal"><img src="images/thumb/photo (11).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (18).jpeg" data-fancybox="gal"><img src="images/thumb/photo (18).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (13).jpeg" data-fancybox="gal"><img src="images/thumb/photo (13).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  <div class="col-md-3 mb-4">
+            <a href="images/photo (21).jpeg" data-fancybox="gal"><img src="images/thumb/photo (21).jpg" alt="Image" class="img-fluid"></a>
+          </div>
+		  
+        </div>
+      </div>
+    </div> 
+
+
+
+
+    
+
+   
 
     </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/aos.js"></script>
 
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
+
+  </body>
 
 </html>
+
