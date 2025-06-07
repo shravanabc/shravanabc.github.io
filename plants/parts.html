@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌿 Plant Explorer - Fun Learning!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(to bottom, #d0f0c0, #ffffff);
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #2e7d32;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .plant-diagram {
+      position: relative;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .plant-diagram img {
+      width: 300px;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s;
+    }
+    .plant-diagram img:hover {
+      transform: scale(1.02);
+    }
+    .part {
+      position: absolute;
+      background: #fff176;
+      padding: 5px 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      animation: pulse 2s infinite;
+    }
+    .part:hover {
+      background-color: #fdd835;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    #leaf { top: 90px; left: 150px; }
+    #stem { top: 160px; left: 130px; }
+    #root { top: 250px; left: 120px; }
+    #flower { top: 30px; left: 160px; }
+    #fruit { top: 60px; left: 210px; }
+
+    #info-box {
+      margin-top: 20px;
+      background-color: #a5d6a7;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.2em;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+
+/* Responsive layout for plant diagram and info box */
+.plant-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  margin-top: 20px;
+}
+@media (orientation: landscape) {
+    .plant-info-container {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .plant-info-container .diagram-side {
+        order: 1;
+        max-width: 500px;
+        width: 50%;
+    }
+    .plant-info-container .info-side {
+        order: 2;
+        max-width: 500px;
+        width: 50%;
+    }
+    #info-box {
+        margin-left: 32px;
+        margin-right: 0;
+        width: 100%;
+        float: none;
+    }
+}
+
+@media (orientation: portrait) {
+    .plant-info-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    .plant-info-container .diagram-side,
+    .plant-info-container .info-side {
+        max-width: 500px;
+        width: 100%;
+    }
+    #info-box {
+        margin-left: auto;
+        margin-right: auto;
+        width: 87%;
+        float: none;
+        
+    }
+}
+  </style>
+</head>
+<body>
+  <h1>🌿 Plant Explorer</h1>
+  <div class="plant-info-container">
+<div class="diagram-side">
+<div class="plant-diagram"></div>
+    <div style="position: relative; width: 85vw; max-width: 500px; margin: 0 auto;">
+        <img src="img/partsofplant.jpg" alt="Plant Diagram" style="width: 80vw; max-width: 500px; height: auto; display: block;">
+        <div class="part" id="leaf" style="position: absolute; top: 8.4%; left: 70%; transform: translate(-50%, -50%);" onclick="showInfo('leaf')">Leaf</div>
+        <div class="part" id="stem" style="position: absolute; top: 56.3%; left: 70%; transform: translate(-50%, -50%);" onclick="showInfo('stem')">Stem</div>
+        <div class="part" id="root" style="position: absolute; top: 78.1%; left: 70%; transform: translate(-50%, -50%);" onclick="showInfo('root')">Root</div>
+        <div class="part" id="flower" style="position: absolute; top: 35%; left: 70%; transform: translate(-50%, -50%);" onclick="showInfo('flower')">Flower</div>
+        <div class="part" id="fruit" style="position: absolute; top: 21.5%; left: 70%; transform: translate(-50%, -50%);" onclick="showInfo('fruit')">Fruit</div>
+    </div>
+    </div>
+
+
+<div id="info-box" class="info-side" style="position: static;"></div>
+</div>
+<script>
+    // Set initial info text
+    document.getElementById('info-box').innerText = "👆 Click on any part of the plant to learn more!";
+</script>
+
+
+
+  <script>
+    function showInfo(part) {
+      const info = {
+        leaf: "🍃 Leaves make food for the plant using sunlight.\n🌬️ Leaves also help the plant breathe by taking in carbon dioxide and releasing oxygen.",
+        stem: "🌿 Stem carries water and food to all parts of the plant.\n🪴 The stem also helps the plant stand tall and reach sunlight.",
+        root: "🌱 Roots absorb water and nutrients from the soil. \n 🌱 Hold the plant in place.\n🕵️‍♂️ Roots also store food for the plant and help it stay strong!",
+        flower: "🌸 Flowers help in reproduction of the plant.\n🐝 Flowers attract bees and butterflies, which help carry pollen from one flower to another.",
+        fruit: "🍎 Fruits contain seeds to grow new plants.\n😋 Many fruits are tasty and healthy to eat!\n🌱 Animals and people help spread seeds by eating fruits."
+      };
+      document.getElementById('info-box').innerText = info[part];
+    }
+
+  </script>
+</body>
+</html>

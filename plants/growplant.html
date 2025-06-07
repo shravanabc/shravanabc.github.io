@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🌱 Grow a Plant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(to bottom, #f0fff0, #c8e6c9);
+      text-align: center;
+      padding: 20px;
+      color: #2e7d32;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    .plant-container {
+      position: relative;
+      height: 250px;
+      width: 200px;
+      margin: 20px auto;
+    }
+    .plant-stage {
+      position: absolute;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 1s;
+          margin-left: -100px;
+    }
+    .plant-stage.visible {
+      opacity: 1;
+    }
+    .grow-button {
+      padding: 10px 80px;
+      font-size: 1.2em;
+      background-color:rgba(0, 0, 0,78%);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-align: center;
+    }
+    .grow-button:hover {
+      background-color: #4caf50;
+    }
+  </style>
+</head>
+<body>
+  <h1>🌱 Grow a Plant</h1>
+
+  <div class="plant-container">
+    <img id="stage0" class="plant-stage visible" src="img/sunflower-seed.png" alt="Seed">
+    <img id="stage1" class="plant-stage" src="img/seed (1).png" alt="Sprout">
+    <img id="stage2" class="plant-stage" src="img/seed.png" alt="Small Plant">
+    <img id="stage3" class="plant-stage" src="img/sprout.png" alt="Small Plant">
+    <img id="stage4" class="plant-stage" src="img/sprout (1).png" alt="Big Plant">
+    <img id="stage5" class="plant-stage" src="img/leaf (1).png" alt="Flowering Plant">
+    <img id="stage6" class="plant-stage" src="img/tree.png" alt="Flowering Plant">
+    <img id="stage7" class="plant-stage" src="img/apple-tree.png" alt="Flowering Plant">
+  </div>
+
+  <button class="grow-button" onclick="growPlant()"> <img src="img/watering-can.png" style="width:60px" /><br>🌿 Grow</button>
+  <p>Click the Button to grow plant by watering </p>
+
+  <script>
+    let currentStage = 0;
+    function growPlant() {
+      const totalStages = 8;
+      if (currentStage < totalStages - 1) {
+        document.getElementById('stage' + currentStage).classList.remove('visible');
+        currentStage++;
+        document.getElementById('stage' + currentStage).classList.add('visible');
+      } else {
+        alert('🌼 Your plant is fully grown!');
+      }
+    }
+  </script>
+</body>
+</html>
