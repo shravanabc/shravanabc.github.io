@@ -326,9 +326,22 @@
 <script type="module">
   import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3.78/dist/web.js'
 
-  Typebot.initPopup({
+  Typebot.initBubble({
     typebot: "shravan-dev5dhu",
     apiHost: "https://bot.rast.ai",
+    previewMessage: {
+      message: "Ask about me!",
+      autoShowDelay: 5000,
+      avatarUrl:
+        "https://storage.rast.ai/typebot/public/workspaces/cma3u19t700008lif5z1sg2rp/typebots/s7yfranxzv55ing87dev5dhu/hostAvatar?v=1749315520653",
+    },
+    theme: {
+      button: { backgroundColor: "#D27A7D", size: "medium" },
+      chatWindow: {
+        backgroundColor:
+          "https://botbuilder.rast.ai/images/backgrounds/brightRain.jpeg",
+      },
+    },
   });
 </script>
   </body>
