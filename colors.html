@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Swipe to Learn Colors</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: sans-serif;
+      overflow: hidden;
+    }
+
+    .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-direction: column;
+      transition: background-color 0.5s ease;
+    }
+
+    h1 {
+      font-size: 3em;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .instructions {
+      font-size: 1em;
+      color: rgba(255,255,255,0.8);
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container" id="colorContainer">
+    <h1 id="colorName">Red</h1>
+    <div class="instructions">Click me to learn colors</div>
+  </div>
+
+  <script>
+    const colors = [
+      { name: "Red", hex: "#FF3B30" },
+      { name: "Orange", hex: "#FF9500" },
+      { name: "Yellow", hex: "#FFCC00" },
+      { name: "Green", hex: "#34C759" },
+      { name: "Blue", hex: "#007AFF" },
+      { name: "Indigo", hex: "#5856D6" },
+      { name: "Purple", hex: "#AF52DE" },
+      { name: "Pink", hex: "#FF2D55" },
+      { name: "Teal", hex: "#5AC8FA" },
+      { name: "Brown", hex: "#A2845E" }
+    ];
+
+
+
+
+    let currentIndex = 0;
+    const container = document.getElementById("colorContainer");
+    const colorName = document.getElementById("colorName");
+
+    function updateColor(index) {
+      const color = colors[index];
+      container.style.backgroundColor = color.hex;
+      colorName.textContent = color.name;
+	  sayColor();
+    }
+
+    function nextColor() {
+      currentIndex = (currentIndex + 1) % colors.length;
+      updateColor(currentIndex);
+    }
+
+    let startX = 0;
+
+    container.addEventListener("click", nextColor);
+
+    container.addEventListener("touchstart", e => {
+      startX = e.touches[0].clientX;
+    });
+
+    container.addEventListener("touchend", e => {
+      const endX = e.changedTouches[0].clientX;
+      if (Math.abs(endX - startX) > 30) {
+        nextColor();
+      }
+    });
+	
+	function sayColor() {
+      const msg = new SpeechSynthesisUtterance(colorName.textContent);
+      speechSynthesis.speak(msg);
+      
+    }
+
+    updateColor(currentIndex);
+	
+  </script>
+
+</body>
+</html>
