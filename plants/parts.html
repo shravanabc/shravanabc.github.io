@@ -161,6 +161,12 @@
         fruit: "🍎 Fruits contain seeds to grow new plants.\n😋 Many fruits are tasty and healthy to eat!\n🌱 Animals and people help spread seeds by eating fruits."
       };
       document.getElementById('info-box').innerText = info[part];
+      sayColor(part)
+    }
+    function sayColor(part) {
+      const msg = new SpeechSynthesisUtterance(part);
+      speechSynthesis.speak(msg);
+      
     }
 
   </script>
