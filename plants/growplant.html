@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,12 +61,12 @@
   <div class="plant-container">
     <img id="stage0" class="plant-stage visible" src="img/sunflower-seed.png" alt="Seed">
     <img id="stage1" class="plant-stage" src="img/seed (1).png" alt="Sprout">
-    <img id="stage2" class="plant-stage" src="img/seed.png" alt="Small Plant">
+    <img id="stage2" class="plant-stage" src="img/seed.png" alt="Seedling">
     <img id="stage3" class="plant-stage" src="img/sprout.png" alt="Small Plant">
-    <img id="stage4" class="plant-stage" src="img/sprout (1).png" alt="Big Plant">
-    <img id="stage5" class="plant-stage" src="img/leaf (1).png" alt="Flowering Plant">
-    <img id="stage6" class="plant-stage" src="img/tree.png" alt="Flowering Plant">
-    <img id="stage7" class="plant-stage" src="img/apple-tree.png" alt="Flowering Plant">
+    <img id="stage4" class="plant-stage" src="img/sprout (1).png" alt="small Plant">
+    <img id="stage5" class="plant-stage" src="img/leaf (1).png" alt="Big Plant">
+    <img id="stage6" class="plant-stage" src="img/tree.png" alt="Tree">
+    <img id="stage7" class="plant-stage" src="img/apple-tree.png" alt="Fully Grown">
   </div>
 
   <button class="grow-button" onclick="growPlant()"> <img src="img/watering-can.png" style="width:60px" /><br>🌿 Grow</button>
@@ -73,16 +74,26 @@
 
   <script>
     let currentStage = 0;
+    
     function growPlant() {
       const totalStages = 8;
       if (currentStage < totalStages - 1) {
         document.getElementById('stage' + currentStage).classList.remove('visible');
         currentStage++;
         document.getElementById('stage' + currentStage).classList.add('visible');
+        var stage =document.getElementById('stage' + currentStage);
+        stage.alt
+        speek( stage.alt)
       } else {
         alert('🌼 Your plant is fully grown!');
       }
     }
+     function speek(part) {
+      const msg = new SpeechSynthesisUtterance(part);
+      speechSynthesis.speak(msg);
+      
+    }
+    speek( "Seed");
   </script>
 </body>
 </html>
